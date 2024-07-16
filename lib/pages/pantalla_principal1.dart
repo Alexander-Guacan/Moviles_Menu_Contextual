@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviles_menu_contextual/pages/factorial_page.dart';
 import 'package:moviles_menu_contextual/pages/pagina_division.dart';
 
 import 'pagina_busqueda.dart';
@@ -20,6 +21,9 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
     PaginaBusqueda(),
     PaginaPerfil(),
     DivisionPage(),
+    FactorialPage(),
+    FactorialPage(),
+    FactorialPage(),
   ];
 
   void _enItemTocado(int indice) {
@@ -107,10 +111,6 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Perfil',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.numbers),
-            label: 'Division',
           ),
         ],
         currentIndex: _indiceSeleccionado % 4,
