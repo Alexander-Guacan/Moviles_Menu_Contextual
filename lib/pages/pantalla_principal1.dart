@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:moviles_menu_contextual/pages/factorial_page.dart';
+import 'package:moviles_menu_contextual/pages/pagina_division.dart';
 
 import 'pagina_busqueda.dart';
 import 'pagina_inicio.dart';
@@ -14,15 +16,19 @@ class PantallaPrincipal1 extends StatefulWidget {
 class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
   int _indiceSeleccionado = 0;
 
-  static List<Widget> _opcionesWidget = <Widget>[
+  static final List<Widget> _opcionesWidget = <Widget>[
     PaginaInicio(),
     PaginaBusqueda(),
     PaginaPerfil(),
+    DivisionPage(),
+    FactorialPage(),
+    FactorialPage(),
+    FactorialPage(),
   ];
 
   void _enItemTocado(int indice) {
     setState(() {
-      _indiceSeleccionado = indice;
+      _indiceSeleccionado = indice + 4;
     });
   }
 
@@ -69,12 +75,22 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Perfil'),
+              leading: const Icon(Icons.close),
+              title: const Text('Multiplicacion'),
               onTap: () {
                 Navigator.pop(context);
                 setState(() {
                   _indiceSeleccionado = 2;
+                });
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.numbers),
+              title: const Text('Division'),
+              onTap: () {
+                Navigator.pop(context);
+                setState(() {
+                  _indiceSeleccionado = 3;
                 });
               },
             ),
@@ -97,7 +113,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
             label: 'Perfil',
           ),
         ],
-        currentIndex: _indiceSeleccionado,
+        currentIndex: _indiceSeleccionado % 4,
         selectedItemColor: Colors.amber[800],
         onTap: _enItemTocado,
       ),
