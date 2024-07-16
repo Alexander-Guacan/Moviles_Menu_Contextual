@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviles_menu_contextual/pages/pagina_division.dart';
 
 import 'pagina_busqueda.dart';
 import 'pagina_inicio.dart';
@@ -14,10 +15,11 @@ class PantallaPrincipal1 extends StatefulWidget {
 class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
   int _indiceSeleccionado = 0;
 
-  static List<Widget> _opcionesWidget = <Widget>[
+  static final List<Widget> _opcionesWidget = <Widget>[
     PaginaInicio(),
     PaginaBusqueda(),
     PaginaPerfil(),
+    DivisionPage(),
   ];
 
   void _enItemTocado(int indice) {
@@ -78,6 +80,16 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
                 });
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.numbers),
+              title: const Text('Division'),
+              onTap: () {
+                Navigator.pop(context);
+                setState(() {
+                  _indiceSeleccionado = 3;
+                });
+              },
+            ),
           ],
         ),
       ),
@@ -95,6 +107,10 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Perfil',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.numbers),
+            label: 'Division',
           ),
         ],
         currentIndex: _indiceSeleccionado,
