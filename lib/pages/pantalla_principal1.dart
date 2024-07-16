@@ -24,7 +24,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
 
   void _enItemTocado(int indice) {
     setState(() {
-      _indiceSeleccionado = indice;
+      _indiceSeleccionado = indice + 4;
     });
   }
 
@@ -113,7 +113,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
             label: 'Division',
           ),
         ],
-        currentIndex: _indiceSeleccionado,
+        currentIndex: _indiceSeleccionado % 4,
         selectedItemColor: Colors.amber[800],
         onTap: _enItemTocado,
       ),
