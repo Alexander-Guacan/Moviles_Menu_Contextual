@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Navegación con Drawer y Bottom Navigation',
       theme: ThemeData(
         primarySwatch: Colors.blue, // Cambia este color según prefieras
