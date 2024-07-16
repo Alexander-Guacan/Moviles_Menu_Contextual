@@ -55,8 +55,8 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Inicio'),
+              leading: const Icon(Icons.add),
+              title: const Text('Suma'),
               onTap: () {
                 Navigator.pop(context);
                 setState(() {
@@ -65,8 +65,8 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.search),
-              title: const Text('Buscar'),
+              leading: const Icon(Icons.remove),
+              title: const Text('Resta'),
               onTap: () {
                 Navigator.pop(context);
                 setState(() {
