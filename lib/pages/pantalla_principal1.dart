@@ -113,7 +113,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
             label: 'Perfil',
           ),
         ],
-        currentIndex: _indiceSeleccionado % 4,
+        // currentIndex: _indiceSeleccionado % 4,
         selectedItemColor: Colors.amber[800],
         onTap: _enItemTocado,
       ),
