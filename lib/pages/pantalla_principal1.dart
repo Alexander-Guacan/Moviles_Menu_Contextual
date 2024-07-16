@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moviles_menu_contextual/pages/factorial_page.dart';
 import 'package:moviles_menu_contextual/pages/pagina_division.dart';
+import 'package:moviles_menu_contextual/pages/parity_page.dart';
 import 'package:moviles_menu_contextual/pages/prime_number_page.dart';
 
 import 'pagina_busqueda.dart';
@@ -23,8 +24,8 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
     PaginaPerfil(),
     DivisionPage(),
     FactorialPage(),
-    PrimeNumberPage(),
-    FactorialPage(),
+    PrimePage(),
+    ParityPage(),
   ];
 
   void _enItemTocado(int indice) {
@@ -111,7 +112,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Perfil',
+            label: 'Par/Impar',
           ),
         ],
         // currentIndex: _indiceSeleccionado % 4,

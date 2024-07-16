@@ -1,40 +1,32 @@
 import 'package:flutter/material.dart';
 
-class PrimePage extends StatefulWidget {
+class ParityPage extends StatefulWidget {
   @override
-  _PrimePageState createState() => _PrimePageState();
+  _ParityPageState createState() => _ParityPageState();
 }
 
-class _PrimePageState extends State<PrimePage> {
+class _ParityPageState extends State<ParityPage> {
   final _numController = TextEditingController();
   String _result = '';
 
-  void _checkPrime() {
+  void _checkParity() {
     final int num = int.tryParse(_numController.text) ?? 0;
-    if (num <= 1) {
+    if (num % 2 == 0) {
       setState(() {
-        _result = '$num is not a prime number';
-        return;
+        _result = 'El numero $num es par';
+      });
+    } else {
+      setState(() {
+        _result = 'El numero $num es impar';
       });
     }
-    for (int i = 2; i <= num ~/ 2; i++) {
-      if (num % i == 0) {
-        setState(() {
-          _result = '$num is not a prime number';
-          return;
-        });
-      }
-    }
-    setState(() {
-      _result = '$num is a prime number';
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prime Checker'),
+        title: Text('Parity Checker'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,8 +42,8 @@ class _PrimePageState extends State<PrimePage> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _checkPrime,
-              child: Text('Check Prime'),
+              onPressed: _checkParity,
+              child: Text('Check Parity'),
             ),
             SizedBox(height: 20),
             Text(
