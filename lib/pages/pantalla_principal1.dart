@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moviles_menu_contextual/pages/factorial_page.dart';
 import 'package:moviles_menu_contextual/pages/pagina_division.dart';
+import 'package:moviles_menu_contextual/pages/prime_number_page.dart';
 
 import 'pagina_busqueda.dart';
 import 'pagina_inicio.dart';
@@ -22,7 +23,7 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
     PaginaPerfil(),
     DivisionPage(),
     FactorialPage(),
-    FactorialPage(),
+    PrimeNumberPage(),
     FactorialPage(),
   ];
 

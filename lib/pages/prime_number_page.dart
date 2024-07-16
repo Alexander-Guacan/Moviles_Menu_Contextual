@@ -18,7 +18,7 @@ class _FactorialPageState extends State<PrimeNumberPage> {
           controller: _number,
           keyboardType: const TextInputType.numberWithOptions(signed: false, decimal: false),
           decoration: const InputDecoration(
-            label: Text("Número")
+            label: Text("Número primo")
           ),
         )],
       ),
