@@ -69,8 +69,8 @@ class _EstadoPantallaPrincipal1 extends State<PantallaPrincipal1> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Perfil'),
+              leading: const Icon(Icons.close),
+              title: const Text('Multiplicacion'),
               onTap: () {
                 Navigator.pop(context);
                 setState(() {
